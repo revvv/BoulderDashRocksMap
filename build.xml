@@ -53,11 +53,4 @@
             <classpath refid="run.MakeMap.classpath"/>
         </java>
     </target>
-    <target name="MakeMap1">
-        <java classname="bdmap.MakeMap" failonerror="true" fork="yes">
-            <jvmarg line="-Dfile.encoding=${java.encoding}"/>
-            <arg line="c:\Users\msiuser\Downloads\Boulder_Dash_Rocks_EUR_NDS-EXiMiUS\contents\BOULDERDASH\Levels\PlanetTour_JungleWorld_01.bdl&#13;&#10;-toc tmp1.html"/>
-            <classpath refid="run.MakeMap1.classpath"/>
-        </java>
-    </target>
 </project>
