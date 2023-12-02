@@ -22,7 +22,9 @@
     $ MakeMap -levelsIniFile Levels.ini PlanetTour_JungleWorld_01.bdl
 ``` 
   will create `world1-01-PlanetTour_JungleWorld_01.png`
-  ![](world1-01-PlanetTour_JungleWorld_01.png)
+  ![World 1 Level 1](https://github.com/revvv/BoulderDashRocksMap/blob/master/maps/world1-01-PlanetTour_JungleWorld_01.png)
+
+  Check out all [converted maps](https://htmlpreview.github.io/?https://github.com/revvv/BoulderDashRocksMap/blob/master/maps/index.html)
 
 ### Cheat Codes ###
 from [jeuxvideo.com](https://www.jeuxvideo.com/wikis-soluce-astuces/cheat-codes/225774)
