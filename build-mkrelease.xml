@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="mkrelease" name="mkrelease">
+
+    <!-- import eclipse2ant generated buildfile -->
+    <import file="build.xml" />
+
+    <property name="version" value="1.0" />
+
+    <target name="mkrelease" description="create distributable zip" depends="build, jar, zip, zip.src" />
+
+    <target name="jar">
+        <jar destfile="bd-map.jar">
+            <fileset dir="bin" />
+        </jar>
+    </target>
+    
+    <target name="zip">
+        <zip destfile="bd-map-${version}.zip">
+            <fileset dir=".">
+                <include name="bd-map.jar" />
+                <include name="*.bat" />
+                <include name="*.sh" />
+            </fileset>
+        </zip>
+    </target>
+    
+    <target name="zip.src" description="create sources zip">
+        <zip destfile="bd-map-${version}-src.zip">
+            <fileset dir=".">
+                <include name="src/**" />
+                <include name="*.xml" />
+                <include name=".classpath" />
+                <include name=".project" />
+            </fileset>
+        </zip>
+    </target>
+    
+    <target name="clean" depends="BoulderDashRocksMap.clean">
+        <delete file="bd-convert.jar" />
+        <delete file="bd-convert-${version}.zip" />
+    </target>
+        
+</project>
