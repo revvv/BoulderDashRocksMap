@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="BoulderDashRocksMap">
+    <!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+    <property environment="env"/>
+    <property name="java.encoding" value="UTF-8"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="17"/>
+    <property name="source" value="17"/>
+    <path id="BoulderDashRocksMap.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.MakeMap.classpath">
+        <path refid="BoulderDashRocksMap.classpath"/>
+    </path>
+    <path id="run.MakeMap1.classpath">
+        <path refid="BoulderDashRocksMap.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="res">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" encoding="${java.encoding}" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <src path="res"/>
+            <classpath refid="BoulderDashRocksMap.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="MakeMap">
+        <java classname="bdmap.MakeMap" failonerror="true" fork="yes">
+            <jvmarg line="-Dfile.encoding=${java.encoding}"/>
+            <classpath refid="run.MakeMap.classpath"/>
+        </java>
+    </target>
+    <target name="MakeMap1">
+        <java classname="bdmap.MakeMap" failonerror="true" fork="yes">
+            <jvmarg line="-Dfile.encoding=${java.encoding}"/>
+            <arg line="c:\Users\msiuser\Downloads\Boulder_Dash_Rocks_EUR_NDS-EXiMiUS\contents\BOULDERDASH\Levels\PlanetTour_JungleWorld_01.bdl&#13;&#10;-toc tmp1.html"/>
+            <classpath refid="run.MakeMap1.classpath"/>
+        </java>
+    </target>
+</project>
