@@ -25,7 +25,7 @@ public class MakeMap
     public static final int WORLD = 0x2c;
     public static final int WIDTH = 0x40;
     public static final int HEIGHT = 0x42;
-    public static final int[] LEVEL_DATA_HEADER = { 0x4C, 0x45, 0x44, 0x00 }; // "LDL"
+    public static final int[] LEVEL_DATA_HEADER = { 0x4C, 0x45, 0x44, 0x00 }; // "LED"
     public static final int[] LEVEL_PROPERTIES_HEADER = { 0x4D, 0x49, 0x47, 0x00 }; // "MIG"
 
     public static final int TITANIUM_WALL_1 = 0x1405;
