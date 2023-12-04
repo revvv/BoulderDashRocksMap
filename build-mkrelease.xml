@@ -4,7 +4,7 @@
     <!-- import eclipse2ant generated buildfile -->
     <import file="build.xml" />
 
-    <property name="version" value="1.0" />
+    <property name="version" value="1.1" />
 
     <target name="mkrelease" description="create distributable zip" depends="build, jar, zip, zip.src" />
 
