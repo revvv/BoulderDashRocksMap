@@ -348,14 +348,14 @@ public class MakeMap
                 int e = Byte.toUnsignedInt(level[pos]) * 256 + Byte.toUnsignedInt(level[pos + 1]);
                 if (e == 0)
                 {
-                    pos += 2; // skip element
+                    pos += 2; // skip space
+                    System.out.print(" "); // space
                     while (level[pos] == 0 && level[pos + 1] == 0)
                     {
                         pos += 2; // skip 2 zero bytes
                         x++;
                         System.out.print(" "); // space
                     }
-                    System.out.print(" "); // additional space
                     continue;
                 }
                 System.out.print(convert(e));
@@ -380,13 +380,6 @@ public class MakeMap
                         x++;
                         System.out.print(" "); // space
                     }
-                }
-                else
-                {
-                    pos += 2; // skip element
-                    pos += 2; // separated with 2 zero bytes (not checked)
-                    x++;
-                    System.out.print(convert(e));
                 }
             }
             System.out.println();
