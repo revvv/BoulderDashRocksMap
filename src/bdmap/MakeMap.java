@@ -321,7 +321,7 @@ public class MakeMap
     private static String convertLevelToMap(String filename)
     {
         byte[] level = FileUtil2.readFile(filename);
-        World world= getWorld(level[WORLD]);
+        World world = getWorld(level[WORLD]);
         int width = level[WIDTH];
         int height = level[HEIGHT];
         int level_start = indexOf(level, toByte(LEVEL_DATA_HEADER)) + LEVEL_DATA_HEADER.length;
@@ -1039,7 +1039,6 @@ public class MakeMap
         for (String file : sortedFiles)
         {
             buf.append("<a href=\""+ file + ".png\">" + file + "</a><br>\n");
-            //buf.append("<img width=600 src=\""+ file + ".png\"><br>\n");
         }
 
         String footer = """
