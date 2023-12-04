@@ -222,6 +222,7 @@ public class MakeMap
     public static final int BACKGROUND_11 = 0x0302;
 
     private static String levelsIniFile = null;
+    private static String[] levelsIniLines = null;
     private static String toc = null;
     private static Map<String, BufferedImage> name2image = new HashMap<>();
     private static final Font font = new Font(Font.SERIF, Font.BOLD, 20);
@@ -977,11 +978,14 @@ public class MakeMap
             return world.toString().toLowerCase() + "-" + f;
         }
 
-        String levelsIni = FileUtil2.readFileUTF8(levelsIniFile);
-        String[] lines = levelsIni.split("\n");
-        for (int i = 0; i < lines.length; i++)
+        if (levelsIniLines == null)
         {
-            String line = lines[i]; // example: "1=PlanetTour_JungleWorld_01.bdl"
+            String levelsIni = FileUtil2.readFileUTF8(levelsIniFile);
+            levelsIniLines = levelsIni.split("\n");
+        }
+        for (int i = 0; i < levelsIniLines.length; i++)
+        {
+            String line = levelsIniLines[i]; // example: "1=PlanetTour_JungleWorld_01.bdl"
             if (line.contains(f))
             {
                 String[] number_file = line.split("=");
