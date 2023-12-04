@@ -8,19 +8,19 @@
 ### HOWTO
 * Install [Java 17](https://adoptium.net/) or higher
 * Unpack `bd-map.zip`
-```
-    Usage: MakeMap [level.bdl] ...
-    
-    Convert Boulder Dash Rocks level into a PNG map.
-    
-    Options:
-     -levelsIniFile <filename>  Levels.ini filename
-     -toc <filename>            Create HTML file which links all PNG maps
-```
+
+      Usage: MakeMap [level.bdl] ...
+      
+      Convert Boulder Dash Rocks level into a PNG map.
+      
+      Options:
+       -levelsIniFile <filename>  Levels.ini filename
+       -toc <filename>            Create HTML file which links all PNG maps
+
 * Example usage:<br>
-```
-    $ MakeMap -levelsIniFile Levels.ini PlanetTour_JungleWorld_01.bdl
-``` 
+
+      $ MakeMap -levelsIniFile Levels.ini PlanetTour_JungleWorld_01.bdl
+
   will create `world1-01-PlanetTour_JungleWorld_01.png`
   ![World 1 Level 1](https://github.com/revvv/BoulderDashRocksMap/blob/master/maps/world1-01-PlanetTour_JungleWorld_01.png)
 
