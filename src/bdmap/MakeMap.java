@@ -22,6 +22,7 @@ import util.ImageUtil2;
 public class MakeMap
 {
     public static final int TILE_SIZE = 78;
+    public static final int WORLD = 0x2c;
     public static final int WIDTH = 0x40;
     public static final int HEIGHT = 0x42;
     public static final int[] LEVEL_DATA_HEADER = { 0x4C, 0x45, 0x44, 0x00 }; // "LDL"
@@ -250,13 +251,14 @@ public class MakeMap
         
         levelsIniFile = getArgumentString(argList, "levelsIniFile");
         toc = getArgumentString(argList, "toc");
-        
+        SortedSet<String> sortedFiles = new TreeSet<>();
         for (String file : argList)
         {
-            convertLevelToMap(file);
+            String pngFilename = convertLevelToMap(file);
+            sortedFiles.add(pngFilename);
         }
         
-        createHtmlToc(argList);
+        createHtmlToc(sortedFiles);
         
         long endTime = System.currentTimeMillis();
         long millis = endTime - startTime;
@@ -285,24 +287,40 @@ public class MakeMap
         WORLD1, WORLD2, WORLD3, WORLD4
     }
 
-    private static World getWorld(String filename)
+    private static World getWorld(int world)
     {
-        String f = FileUtil2.getBasename(filename);
-        if (f.toLowerCase().contains("jungle"))
+        switch (world)
+        {
+        case 1:
             return World.WORLD1;
-        if (f.toLowerCase().contains("lava"))
+        case 2:
             return World.WORLD2;
-        if (f.toLowerCase().contains("water"))
+        case 3:
             return World.WORLD3;
-        if (f.toLowerCase().contains("nether"))
+        case 4:
             return World.WORLD4;
-        return World.WORLD1;
+        case 5:
+            return World.WORLD1; // boss stage
+        case 6:
+            return World.WORLD2; // boss stage
+        case 7:
+            return World.WORLD3; // boss stage
+        case 8:
+            return World.WORLD4; // boss stage
+        default:
+            throw new IllegalArgumentException("Illegal world found: " + world);
+        }
     }
 
-    private static void convertLevelToMap(String filename)
+    /**
+     * Convert level to PNG map file.
+     * @param filename level.bdl
+     * @return PNG filename
+     */
+    private static String convertLevelToMap(String filename)
     {
-        World world = getWorld(filename);
         byte[] level = FileUtil2.readFile(filename);
+        World world= getWorld(level[WORLD]);
         int width = level[WIDTH];
         int height = level[HEIGHT];
         int level_start = indexOf(level, toByte(LEVEL_DATA_HEADER)) + LEVEL_DATA_HEADER.length;
@@ -386,7 +404,7 @@ public class MakeMap
         }
 
         // add description footer
-        String renamedFile = renameLevelAccordingToIniFile(filename);
+        String renamedFile = renameLevelAccordingToIniFile(filename, world);
         String footer = "Level: " + renamedFile + ", Diamonds needed: " + diamonds + ", Max. time: " + time;
         BufferedImage imageWithFooter = new BufferedImage(img.getWidth(), img.getHeight() + font.getSize() * 2, BufferedImage.TYPE_INT_RGB);
         imageWithFooter.getGraphics().drawImage(img, 0, 0, img.getWidth(), img.getHeight(), null);
@@ -399,6 +417,8 @@ public class MakeMap
         System.out.println("Writing map file: " + renamedFile  + ".png");
         ImageUtil2.writeImage(imageWithFooter, renamedFile + ".png");
         System.out.println();
+        
+        return renamedFile;
     }
 
     private static void addTile(BufferedImage img, int x, int y, int element, World world)
@@ -938,9 +958,8 @@ public class MakeMap
         }
     }
 
-    private static String renameLevelAccordingToIniFile(String levelFilename)
+    private static String renameLevelAccordingToIniFile(String levelFilename, World world)
     {
-        World world = getWorld(levelFilename);
         String type = ""; // to add prefix RouteRace, DoubleDash or TimeTrial
                           // to get a natural file order  
         String f = FileUtil2.getBasename(levelFilename); // examples: "PlanetTour_JungleWorld_01", "BossLevel_Jungle.bdl", "RouteRace_000a.bdl"
@@ -990,7 +1009,7 @@ public class MakeMap
         return null;
     }
     
-    private static void createHtmlToc(List<String> files)
+    private static void createHtmlToc(SortedSet<String> sortedFiles)
     {
         if (toc == null)
         {
@@ -1013,12 +1032,6 @@ public class MakeMap
                 """;
         buf.append(header);
         
-        SortedSet<String> sortedFiles = new TreeSet<>();        
-        for (String file : files)
-        {
-            String renamedFile = renameLevelAccordingToIniFile(file);
-            sortedFiles.add(renamedFile);
-        }
         for (String file : sortedFiles)
         {
             buf.append("<a href=\""+ file + ".png\">" + file + "</a><br>\n");
