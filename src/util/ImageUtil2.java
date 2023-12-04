@@ -110,7 +110,6 @@ public class ImageUtil2
             }
         }
     
-        // FIX: there was one pixel missing (UPDATE: this is not always required, might go wrong)
         BufferedImage res = new BufferedImage((bottomX - topX + 2), (bottomY - topY + 2),
                 BufferedImage.TYPE_INT_ARGB);
         
