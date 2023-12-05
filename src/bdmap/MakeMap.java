@@ -350,12 +350,6 @@ public class MakeMap
                 {
                     pos += 2; // skip space
                     System.out.print(" "); // space
-                    while (level[pos] == 0 && level[pos + 1] == 0)
-                    {
-                        pos += 2; // skip 2 zero bytes
-                        x++;
-                        System.out.print(" "); // space
-                    }
                     continue;
                 }
                 System.out.print(convert(e));
