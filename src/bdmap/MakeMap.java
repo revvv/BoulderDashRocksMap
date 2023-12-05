@@ -354,12 +354,11 @@ public class MakeMap
                 }
                 System.out.print(convert(e));
                 addTile(img, x, y, e, world);
-
                 pos += 2; // element is 2 bytes wide
+                
                 int highByte = Byte.toUnsignedInt(level[pos]);
                 int lowByte = Byte.toUnsignedInt(level[pos + 1]);
                 e = highByte * 256 + lowByte; // element or separator (2 zero bytes) or space
-
                 if (e == 0)
                 {
                     pos += 2; // separated with 2 zero bytes
