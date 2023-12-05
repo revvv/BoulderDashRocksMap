@@ -124,7 +124,10 @@ public class MakeMap
     public static final int MONSTER_OWL_3 = 0xf700;
     public static final int MONSTER_OWL_4 = 0xf800;
 
-    public static final int MONSTER_SPIDER = 0xff00;
+    public static final int MONSTER_SPIDER_LEFT_RIGHT_1 = 0xff00;
+    public static final int MONSTER_SPIDER_LEFT_RIGHT_2 = 0x0001; 
+    public static final int MONSTER_SPIDER_UP_DOWN_1 = 0x0101;
+    public static final int MONSTER_SPIDER_UP_DOWN_2 = 0x0201;
 
     public static final int BOSS = 0x2201;
 
@@ -208,18 +211,6 @@ public class MakeMap
 
     public static final int EXPANDING_WALL_HORIZONTAL = 0x3708;
     public static final int EXPANDING_WALL_VERTICAL = 0x3508;
-
-    public static final int BACKGROUND_1 = 0x0001;
-    public static final int BACKGROUND_2 = 0x0002;
-    public static final int BACKGROUND_3 = 0x0100;
-    public static final int BACKGROUND_4 = 0x0101;
-    public static final int BACKGROUND_5 = 0x0102;
-    public static final int BACKGROUND_6 = 0x0103;
-    public static final int BACKGROUND_7 = 0x0200;
-    public static final int BACKGROUND_8 = 0x0201;
-    public static final int BACKGROUND_9 = 0x0202;
-    public static final int BACKGROUND_10 = 0x0301;
-    public static final int BACKGROUND_11 = 0x0302;
 
     private static String levelsIniFile = null;
     private static String[] levelsIniLines = null;
@@ -526,7 +517,10 @@ public class MakeMap
         case MONSTER_OWL_3:
         case MONSTER_OWL_4:
             return "O";
-        case MONSTER_SPIDER:
+        case MONSTER_SPIDER_LEFT_RIGHT_1:
+        case MONSTER_SPIDER_LEFT_RIGHT_2:
+        case MONSTER_SPIDER_UP_DOWN_1:
+        case MONSTER_SPIDER_UP_DOWN_2:
             return "%";
         case BOSS:
             return "X";
@@ -631,18 +625,6 @@ public class MakeMap
             return "Z";
         case EXPANDING_WALL_VERTICAL:
             return "N";
-        case BACKGROUND_1:
-        case BACKGROUND_2:
-        case BACKGROUND_3:
-        case BACKGROUND_4:
-        case BACKGROUND_5:
-        case BACKGROUND_6:
-        case BACKGROUND_7:
-        case BACKGROUND_8:
-        case BACKGROUND_9:
-        case BACKGROUND_10:
-        case BACKGROUND_11:
-            return " "; // background (unfortunately hit, because the level size for some levels include outer walls) 
         default:
             System.out.println("Unknown: 0x" + Integer.toHexString(element));
             return "?";
@@ -809,7 +791,10 @@ public class MakeMap
         case MONSTER_OWL_3:
         case MONSTER_OWL_4:
             return "monster_owl.png";
-        case MONSTER_SPIDER:
+        case MONSTER_SPIDER_LEFT_RIGHT_1:
+        case MONSTER_SPIDER_LEFT_RIGHT_2:
+        case MONSTER_SPIDER_UP_DOWN_1:
+        case MONSTER_SPIDER_UP_DOWN_2:
             return "monster_spider.png";
         case BOSS:
             return "boss.png";
@@ -921,18 +906,6 @@ public class MakeMap
             return "expanding_wall_horizontal.png";
         case EXPANDING_WALL_VERTICAL:
             return "expanding_wall_vertical.png";
-        case BACKGROUND_1:
-        case BACKGROUND_2:
-        case BACKGROUND_3:
-        case BACKGROUND_4:
-        case BACKGROUND_5:
-        case BACKGROUND_6:
-        case BACKGROUND_7:
-        case BACKGROUND_8:
-        case BACKGROUND_9:
-        case BACKGROUND_10:
-        case BACKGROUND_11:
-            return "space.png"; // background (unfortunately hit, because the level size for some levels include outer walls) 
         default:
             System.out.println("Unknown: 0x" + Integer.toHexString(element));
             return "?";
