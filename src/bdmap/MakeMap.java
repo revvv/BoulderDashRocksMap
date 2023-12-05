@@ -358,7 +358,7 @@ public class MakeMap
                 
                 int highByte = Byte.toUnsignedInt(level[pos]);
                 int lowByte = Byte.toUnsignedInt(level[pos + 1]);
-                e = highByte * 256 + lowByte; // element or separator (2 zero bytes) or space
+                e = highByte * 256 + lowByte; // separator (2 zero bytes) or filler
                 if (e == 0)
                 {
                     pos += 2; // separated with 2 zero bytes
