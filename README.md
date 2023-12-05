@@ -50,3 +50,9 @@ from [jeuxvideo.com](https://www.jeuxvideo.com/wikis-soluce-astuces/cheat-codes/
 
 * **Remove cheat messages from the screen**<br>
   Hold L, R and A.
+  
+* **Stop timer**<br>
+  Hold L and press A.
+  
+* **Cycle through all help messages**<br>
+  Hold L, R and X.
