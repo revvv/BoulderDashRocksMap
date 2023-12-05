@@ -374,12 +374,6 @@ public class MakeMap
                 {
 
                     pos += 2; // skip filler
-                    while (level[pos] == 0 && level[pos + 1] == 0)
-                    {
-                        pos += 2; // skip 2 zero bytes
-                        x++;
-                        System.out.print(" "); // space
-                    }
                 }
             }
             System.out.println();
