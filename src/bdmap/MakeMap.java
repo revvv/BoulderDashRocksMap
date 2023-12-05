@@ -361,7 +361,7 @@ public class MakeMap
                 e = highByte * 256 + lowByte; // separator (2 zero bytes) or filler
                 if (e == 0)
                 {
-                    pos += 2; // separated with 2 zero bytes
+                    pos += 2; // skip separator (2 zero bytes)
                 }
                 else if (lowByte == 0)
                 {
@@ -642,7 +642,7 @@ public class MakeMap
         case BACKGROUND_9:
         case BACKGROUND_10:
         case BACKGROUND_11:
-            return ""; // background (unfortunately hit, because the level size for some levels include outer walls) 
+            return " "; // background (unfortunately hit, because the level size for some levels include outer walls) 
         default:
             System.out.println("Unknown: 0x" + Integer.toHexString(element));
             return "?";
