@@ -13,12 +13,6 @@
     <path id="BoulderDashRocksMap.classpath">
         <pathelement location="bin"/>
     </path>
-    <path id="run.MakeMap.classpath">
-        <path refid="BoulderDashRocksMap.classpath"/>
-    </path>
-    <path id="run.MakeMap1.classpath">
-        <path refid="BoulderDashRocksMap.classpath"/>
-    </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -47,10 +41,4 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target name="MakeMap">
-        <java classname="bdmap.MakeMap" failonerror="true" fork="yes">
-            <jvmarg line="-Dfile.encoding=${java.encoding}"/>
-            <classpath refid="run.MakeMap.classpath"/>
-        </java>
-    </target>
 </project>
