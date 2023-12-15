@@ -79,12 +79,12 @@ public class MakeMap
     public static final int BOULDER_HEAVY = 0x9a01;
     public static final int BOULDER_LIGHT = 0x3a02; // swims
 
-    public static final int MONSTER_UP_DOWN = 0xcd00;
+    public static final int MONSTER_UP_DOWN = 0xcd00; // Evil Lettuce
 
-    public static final int MONSTER_LEFT_RIGHT_1 = 0xc800;
+    public static final int MONSTER_LEFT_RIGHT_1 = 0xc800; // Ugarrr
     public static final int MONSTER_LEFT_RIGHT_2 = 0xc900;
 
-    public static final int MONSTER_BEES = 0xce00;
+    public static final int MONSTER_BEES = 0xce00; // Louseeee
 
     public static final int MONSTER_SKULL = 0xa005; // poison in all directions
 
@@ -93,23 +93,23 @@ public class MakeMap
     public static final int MONSTER_SKULL_FLAME_DOWN = 0xa305;
     public static final int MONSTER_SKULL_FLAME_LEFT = 0xa405;
 
-    public static final int MONSTER_FLAME_1 = 0xd200;
+    public static final int MONSTER_FLAME_1 = 0xd200; // Ouchy
     public static final int MONSTER_FLAME_2 = 0xd300;
     public static final int MONSTER_FLAME_3 = 0xd400;
     public static final int MONSTER_FLAME_4 = 0xd500;
 
-    public static final int MONSTER_TAURUS_1 = 0xd700;
+    public static final int MONSTER_TAURUS_1 = 0xd700; // Fire Demon
     public static final int MONSTER_TAURUS_2 = 0xd800;
     public static final int MONSTER_TAURUS_3 = 0xd900;
     public static final int MONSTER_TAURUS_4 = 0xda00;
 
-    public static final int MONSTER_DIAMOND_EATER_1 = 0xdc00;
+    public static final int MONSTER_DIAMOND_EATER_1 = 0xdc00; // Diamondeater
     public static final int MONSTER_DIAMOND_EATER_2 = 0xdd00;
 
-    public static final int MONSTER_CRAB_1 = 0xf000;
+    public static final int MONSTER_CRAB_1 = 0xf000; // Crap
     public static final int MONSTER_CRAB_2 = 0xf100;
 
-    public static final int MONSTER_SQUID_1 = 0xeb00;
+    public static final int MONSTER_SQUID_1 = 0xeb00; // Susha
     public static final int MONSTER_SQUID_2 = 0xec00;
     public static final int MONSTER_SQUID_3 = 0xed00;
     public static final int MONSTER_SQUID_4 = 0xee00;
@@ -117,14 +117,14 @@ public class MakeMap
     public static final int MONSTER_MANTA_RAY_1 = 0xe600;
     public static final int MONSTER_MANTA_RAY_2 = 0xe700;
 
-    public static final int MONSTER_SKELETON = 0xfa00;
+    public static final int MONSTER_SKELETON = 0xfa00; // Reaper
 
-    public static final int MONSTER_OWL_1 = 0xf500;
+    public static final int MONSTER_OWL_1 = 0xf500; // Ol'Nick
     public static final int MONSTER_OWL_2 = 0xf600;
     public static final int MONSTER_OWL_3 = 0xf700;
     public static final int MONSTER_OWL_4 = 0xf800;
 
-    public static final int MONSTER_SPIDER_LEFT_RIGHT_1 = 0xff00;
+    public static final int MONSTER_SPIDER_LEFT_RIGHT_1 = 0xff00; // Spider Boy
     public static final int MONSTER_SPIDER_LEFT_RIGHT_2 = 0x0001; 
     public static final int MONSTER_SPIDER_UP_DOWN_1 = 0x0101;
     public static final int MONSTER_SPIDER_UP_DOWN_2 = 0x0201;
