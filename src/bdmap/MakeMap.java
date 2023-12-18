@@ -77,7 +77,7 @@ public class MakeMap
 
     public static final int BOULDER = 0x9001;
     public static final int BOULDER_HEAVY = 0x9a01;
-    public static final int BOULDER_LIGHT = 0x3a02; // swims
+    public static final int BOULDER_LIGHT = 0x3a02; // Buoy
 
     public static final int MONSTER_UP_DOWN = 0xcd00; // Evil Lettuce
 
@@ -114,8 +114,8 @@ public class MakeMap
     public static final int MONSTER_SQUID_3 = 0xed00;
     public static final int MONSTER_SQUID_4 = 0xee00;
 
-    public static final int MONSTER_MANTA_RAY_1 = 0xe600;
-    public static final int MONSTER_MANTA_RAY_2 = 0xe700;
+    public static final int MONSTER_SHARK_1 = 0xe600;
+    public static final int MONSTER_SHARK_2 = 0xe700;
 
     public static final int MONSTER_SKELETON = 0xfa00; // Reaper
 
@@ -129,12 +129,12 @@ public class MakeMap
     public static final int MONSTER_SPIDER_UP_DOWN_1 = 0x0101;
     public static final int MONSTER_SPIDER_UP_DOWN_2 = 0x0201;
 
-    public static final int BOSS = 0x2201;
+    public static final int BOSS = 0x2201; // Von Tentacle / Von Wormlegs
 
-    public static final int POWERUP_AMMO = 0x4108;
+    public static final int POWERUP_AMMO = 0x4108; // red ammo
     public static final int POWERUP_AMMO_ONCE = 0x2c01;
 
-    public static final int POWERUP_MAGNET = 0x4208;
+    public static final int POWERUP_MAGNET = 0x4208; // green ammo
     public static final int POWERUP_MAGNET_ONCE = 0x2d01;
 
     public static final int POWERUP_WATER = 0x4308;
@@ -143,7 +143,7 @@ public class MakeMap
     public static final int POWERUP_BOMB = 0x4408;
     public static final int POWERUP_BOMB_ONCE = 0x2f01;
 
-    public static final int POWERUP_FREEZE = 0x4508;
+    public static final int POWERUP_FREEZE = 0x4508; // yellow ammo
     public static final int POWERUP_FREEZE_ONCE = 0x3001; // unused
 
     public static final int POWERUP_EMPTY = 0x4608; // only in world4 boss
@@ -202,7 +202,7 @@ public class MakeMap
     public static final int HYDRANT_LEFT = 0x7a05;
     public static final int HYDRANT_RIGHT = 0x7b05;
 
-    public static final int POWERUP_DIVE = 0x3601;
+    public static final int POWERUP_OXYGEN = 0x3601;
 
     public static final int SPIDER_WEB = 0x3a08;
 
@@ -424,7 +424,7 @@ public class MakeMap
         case TITANIUM_WALL_9:
         case TITANIUM_WALL_10:
             return "W";
-        case MONSTER_GATE_1:
+        case MONSTER_GATE_1: // Grindstone
         case MONSTER_GATE_2:
             return "=";
         case EXIT:
@@ -507,8 +507,8 @@ public class MakeMap
         case MONSTER_SQUID_3:
         case MONSTER_SQUID_4:
             return "q";
-        case MONSTER_MANTA_RAY_1:
-        case MONSTER_MANTA_RAY_2:
+        case MONSTER_SHARK_1:
+        case MONSTER_SHARK_2:
             return "r";
         case MONSTER_SKELETON:
             return "n";
@@ -609,11 +609,11 @@ public class MakeMap
             return "$";
         case WATER:
             return "~";
-        case HYDRANT_LEFT:
+        case HYDRANT_LEFT: // Pipe
             return "{";
-        case HYDRANT_RIGHT:
+        case HYDRANT_RIGHT: // Pipe
             return "}";
-        case POWERUP_DIVE:
+        case POWERUP_OXYGEN:
             return "&";
         case SPIDER_WEB:
             return "#";
@@ -781,9 +781,9 @@ public class MakeMap
         case MONSTER_SQUID_3:
         case MONSTER_SQUID_4:
             return "monster_squid.png";
-        case MONSTER_MANTA_RAY_1:
-        case MONSTER_MANTA_RAY_2:
-            return "monster_manta_ray.png";
+        case MONSTER_SHARK_1:
+        case MONSTER_SHARK_2:
+            return "monster_shark.png";
         case MONSTER_SKELETON:
             return "monster_skeleton.png";
         case MONSTER_OWL_1:
@@ -894,7 +894,7 @@ public class MakeMap
             return "hydrant_left.png";
         case HYDRANT_RIGHT:
             return "hydrant_right.png";
-        case POWERUP_DIVE:
+        case POWERUP_OXYGEN:
             return "powerup_dive.png";
         case SPIDER_WEB:
             return "spiderweb.png";
