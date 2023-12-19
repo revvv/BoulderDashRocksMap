@@ -199,7 +199,7 @@ public class MakeMap
 
     public static final int WATER = 0xed07;
 
-    public static final int HYDRANT_LEFT = 0x7a05;
+    public static final int HYDRANT_LEFT = 0x7a05;  // Pipe
     public static final int HYDRANT_RIGHT = 0x7b05;
 
     public static final int POWERUP_OXYGEN = 0x3601;
@@ -609,9 +609,9 @@ public class MakeMap
             return "$";
         case WATER:
             return "~";
-        case HYDRANT_LEFT: // Pipe
+        case HYDRANT_LEFT:
             return "{";
-        case HYDRANT_RIGHT: // Pipe
+        case HYDRANT_RIGHT:
             return "}";
         case POWERUP_OXYGEN:
             return "&";
