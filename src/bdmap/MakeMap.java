@@ -170,27 +170,25 @@ public class MakeMap
     public static final int TELEPORTER_GREEN = 0xb705;
     public static final int TELEPORTER_ORANGE = 0xb605;
 
+    public static final int ONEWAY_LEFT = 0x7d05;
     public static final int ONEWAY_RIGHT = 0x7e05;
     public static final int ONEWAY_UP = 0x7f05;
-    public static final int ONEWAY_LEFT = 0x7d05;
     public static final int ONEWAY_DOWN = 0x8005;
 
-    public static final int LAVA_DOWN_RIGHT = 0x7607;
-    public static final int LAVA_UP_LEFT = 0x7407;
-    public static final int LAVA_DOWN_LEFT = 0x7307;
-    public static final int LAVA_UP_RIGHT = 0x7507;
-
-    public static final int LAVA_HORIZONTAL_1 = 0x7707;
-    public static final int LAVA_HORIZONTAL_2 = 0x6c07;
-    public static final int LAVA_LEFT = 0x7007;
+    public static final int LAVA_HORIZONTAL_1 = 0x6c07;
+    public static final int LAVA_VERTICAL_1 = 0x6d07;
     public static final int LAVA_RIGHT = 0x6e07;
-    public static final int LAVA_ISOLATED = 0x7207;
-
-    public static final int LAVA_UP = 0x7107;
     public static final int LAVA_DOWN = 0x6f07;
-    public static final int LAVA_VERTICAL_1 = 0x7807;
-    public static final int LAVA_VERTICAL_2 = 0x6d07;
-
+    public static final int LAVA_LEFT = 0x7007;
+    public static final int LAVA_UP = 0x7107;
+    public static final int LAVA_ISOLATED = 0x7207;
+    public static final int LAVA_DOWN_LEFT = 0x7307;
+    public static final int LAVA_UP_LEFT = 0x7407;
+    public static final int LAVA_UP_RIGHT = 0x7507;
+    public static final int LAVA_DOWN_RIGHT = 0x7607;
+    public static final int LAVA_HORIZONTAL_2 = 0x7707;
+    public static final int LAVA_VERTICAL_2 = 0x7807;
+    
     public static final int INFLAMMABLE = 0xa505;
 
     public static final int OIL_DROP = 0xa705;
@@ -207,6 +205,7 @@ public class MakeMap
     public static final int SPIDER_WEB = 0x3a08;
 
     public static final int POISON_BOTTLE = 0x3d08;
+    
     public static final int MAGIC_WALL = 0x3908;
 
     public static final int EXPANDING_WALL_HORIZONTAL = 0x3708;
@@ -591,16 +590,16 @@ public class MakeMap
             return "X";
         case LAVA_UP_RIGHT:
             return "\\";
-        case LAVA_HORIZONTAL_1:
         case LAVA_HORIZONTAL_2:
+        case LAVA_HORIZONTAL_1:
         case LAVA_LEFT:
         case LAVA_RIGHT:
         case LAVA_ISOLATED:
             return "-";
         case LAVA_UP:
         case LAVA_DOWN:
-        case LAVA_VERTICAL_1:
         case LAVA_VERTICAL_2:
+        case LAVA_VERTICAL_1:
             return "|";
         case INFLAMMABLE:
             return "i";
@@ -867,8 +866,8 @@ public class MakeMap
             return "lava_down_left.png";
         case LAVA_UP_RIGHT:
             return "lava_up_right.png";
-        case LAVA_HORIZONTAL_1:
         case LAVA_HORIZONTAL_2:
+        case LAVA_HORIZONTAL_1:
             return "lava_horizontal.png";
         case LAVA_LEFT:
             return "lava_left.png";
@@ -880,8 +879,8 @@ public class MakeMap
             return "lava_up.png";
         case LAVA_DOWN:
             return "lava_down.png";
-        case LAVA_VERTICAL_1:
         case LAVA_VERTICAL_2:
+        case LAVA_VERTICAL_1:
             return "lava_vertical.png";
         case INFLAMMABLE:
             return "inflammable.png";
