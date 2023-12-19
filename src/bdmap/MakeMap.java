@@ -39,7 +39,7 @@ public class MakeMap
     public static final int TITANIUM_WALL_9 = 0x1C05;
     public static final int TITANIUM_WALL_10 = 0x1D05;
 
-    public static final int MONSTER_GATE_1 = 0x8205;
+    public static final int MONSTER_GATE_1 = 0x8205; // Grindstone
     public static final int MONSTER_GATE_2 = 0xbe05;
 
     public static final int EXIT = 0x7C05;
@@ -425,7 +425,7 @@ public class MakeMap
         case TITANIUM_WALL_9:
         case TITANIUM_WALL_10:
             return "W";
-        case MONSTER_GATE_1: // Grindstone
+        case MONSTER_GATE_1:
         case MONSTER_GATE_2:
             return "=";
         case EXIT:
