@@ -59,7 +59,7 @@ public class MakeMap
     public static final int WALL_13 = 0x5804;
 
     public static final int DIAMOND = 0x1002;
-    public static final int DIAMOND_FALLING = 0x1202;
+    public static final int DIAMOND_LIGHT = 0x1202; // swims
 
     public static final int DIAMOND_SUPER = 0x1402; // white, one per level
 
@@ -152,12 +152,12 @@ public class MakeMap
 
     public static final int POWERUP_TIME = 0x3501;
 
-    public static final int KEY_RED = 0x8d05;
     public static final int KEY_YELLOW = 0x8c05;
+    public static final int KEY_RED = 0x8d05;
     public static final int KEY_WHITE = 0x8e05;
 
-    public static final int LOCK_RED = 0x9705;
     public static final int LOCK_YELLOW = 0x9605;
+    public static final int LOCK_RED = 0x9705;
     public static final int LOCK_WHITE = 0x9805;
 
     public static final int HEALTH_ONCE = 0x3201;
@@ -233,7 +233,7 @@ public class MakeMap
             System.out.println();
             System.out.println("Convert Boulder Dash Rocks level into a PNG map.");
             System.out.println();
-            System.out.println("Options:");            
+            System.out.println("Options:");
             System.out.println(" -levelsIniFile <filename>  Levels.ini filename");
             System.out.println(" -toc <filename>            Create HTML file which links all PNG maps");
             System.out.println();
@@ -444,7 +444,7 @@ public class MakeMap
         case WALL_13:
             return "w";
         case DIAMOND:
-        case DIAMOND_FALLING:
+        case DIAMOND_LIGHT:
             return "d";
         case DIAMOND_SUPER:
             return "D";
@@ -687,7 +687,7 @@ public class MakeMap
                 return "wall_world4.png";
             }
         case DIAMOND:
-        case DIAMOND_FALLING:
+        case DIAMOND_LIGHT:
             switch (world)
             {
             case WORLD1:
