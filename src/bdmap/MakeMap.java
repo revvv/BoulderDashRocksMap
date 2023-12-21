@@ -84,7 +84,7 @@ public class MakeMap
     public static final int MONSTER_LEFT_RIGHT_1 = 0xc800; // Ugarrr
     public static final int MONSTER_LEFT_RIGHT_2 = 0xc900;
 
-    public static final int MONSTER_BEES = 0xce00; // Louseeee
+    public static final int MONSTER_FLIES = 0xce00; // Louseeee
 
     public static final int MONSTER_SKULL = 0xa005; // poison in all directions
 
@@ -474,7 +474,7 @@ public class MakeMap
         case MONSTER_LEFT_RIGHT_1:
         case MONSTER_LEFT_RIGHT_2:
             return "2";
-        case MONSTER_BEES:
+        case MONSTER_FLIES:
             return "3";
         case MONSTER_SKULL:
             return "4";
@@ -748,8 +748,8 @@ public class MakeMap
         case MONSTER_LEFT_RIGHT_1:
         case MONSTER_LEFT_RIGHT_2:
             return "monster_left_right.png";
-        case MONSTER_BEES:
-            return "monster_bees.png";
+        case MONSTER_FLIES:
+            return "monster_flies.png";
         case MONSTER_SKULL:
             return "monster_skull.png";
         case MONSTER_SKULL_FLAME_UP:
