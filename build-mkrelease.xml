@@ -20,6 +20,7 @@
                 <include name="bd-map.jar" />
                 <include name="*.bat" />
                 <include name="*.sh" />
+                <include name="LICENSE" />
             </fileset>
         </zip>
     </target>
