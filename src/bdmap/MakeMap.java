@@ -137,10 +137,10 @@ public class MakeMap
     public static final int POWERUP_MAGNET = 0x4208; // green ammo
     public static final int POWERUP_MAGNET_ONCE = 0x2d01;
 
-    public static final int POWERUP_WATER = 0x4308;
+    public static final int POWERUP_WATER = 0x4308; // blue ammo
     public static final int POWERUP_WATER_ONCE = 0x2e01;
 
-    public static final int POWERUP_BOMB = 0x4408;
+    public static final int POWERUP_BOMB = 0x4408; // black ammo
     public static final int POWERUP_BOMB_ONCE = 0x2f01;
 
     public static final int POWERUP_FREEZE = 0x4508; // yellow ammo
@@ -151,6 +151,8 @@ public class MakeMap
     public static final int POWERUP_SPEED = 0x3401;
 
     public static final int POWERUP_TIME = 0x3501;
+    
+    public static final int POWERUP_OXYGEN = 0x3601;
 
     public static final int KEY_YELLOW = 0x8c05;
     public static final int KEY_RED = 0x8d05;
@@ -200,11 +202,9 @@ public class MakeMap
     public static final int HYDRANT_LEFT = 0x7a05;  // Pipe
     public static final int HYDRANT_RIGHT = 0x7b05;
 
-    public static final int POWERUP_OXYGEN = 0x3601;
-
     public static final int SPIDER_WEB = 0x3a08;
 
-    public static final int POISON_BOTTLE = 0x3d08;
+    public static final int POISON_BOTTLE = 0x3d08; // Poisonous Drop
     
     public static final int MAGIC_WALL = 0x3908;
 
@@ -541,7 +541,7 @@ public class MakeMap
         case POWERUP_BOMB_ONCE:
             return "g";
         case POWERUP_FREEZE:
-        case POWERUP_FREEZE_ONCE: // unused
+        case POWERUP_FREEZE_ONCE:
             return "s";
         case POWERUP_EMPTY:
             return "0";
