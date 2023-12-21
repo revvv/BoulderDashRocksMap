@@ -915,7 +915,7 @@ public class MakeMap
     {
         String type = ""; // to add prefix RouteRace, DoubleDash or TimeTrial
                           // to get a natural file order  
-        String f = FileUtil2.getBasename(levelFilename); // examples: "PlanetTour_JungleWorld_01", "BossLevel_Jungle.bdl", "RouteRace_000a.bdl"
+        String f = FileUtil2.getBasename(levelFilename); // examples: "PlanetTour_JungleWorld_01", "BossLevel_Jungle", "RouteRace_000a"
         if (!f.startsWith("PlanetTour") && !f.startsWith("BossLevel"))
         {
             int index = f.indexOf("_");
