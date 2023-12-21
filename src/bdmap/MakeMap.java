@@ -312,13 +312,11 @@ public class MakeMap
     {
         byte[] level = FileUtil2.readFile(filename);
         World world = getWorld(level[WORLD]);
-        String renamedFile = renameLevelAccordingToIniFile(filename, world);
         int width = level[WIDTH];
         int height = level[HEIGHT];
         int level_start = indexOf(level, toByte(LEVEL_DATA_HEADER)) + LEVEL_DATA_HEADER.length;
         int level_properties = indexOf(level, toByte(LEVEL_PROPERTIES_HEADER)) + LEVEL_PROPERTIES_HEADER.length;
-        System.out.println("File: " + filename);
-        System.out.println("Level: " + renamedFile);
+        System.out.println("Level: " + filename);
         System.out.println("Dimension: " + width + " x " + height);
         int diamonds = Byte.toUnsignedInt(level[level_properties + 2]);
         int time = Byte.toUnsignedInt(level[level_properties + 10]);
@@ -377,6 +375,7 @@ public class MakeMap
         }
 
         // add description footer
+        String renamedFile = renameLevelAccordingToIniFile(filename, world);
         String footer = "Level: " + renamedFile + ", Diamonds needed: " + diamonds + ", Max. time: " + time;
         BufferedImage imageWithFooter = new BufferedImage(img.getWidth(), img.getHeight() + font.getSize() * 2, BufferedImage.TYPE_INT_RGB);
         imageWithFooter.getGraphics().drawImage(img, 0, 0, img.getWidth(), img.getHeight(), null);
